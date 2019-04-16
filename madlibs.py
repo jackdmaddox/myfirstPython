@@ -1,0 +1,7 @@
+celebAction = input('Enter a verb...')
+Celebrity = input('Please enter the name of a celebrity...')
+Gender = input('is that a he, she or they?')
+Animal = input('Please enter a type of animal...')
+Verb = input('What is the animal doing...')
+numberofAnimals = input('How many of them are there?')
+print ("%s " "%s " "are" " %s" " %s " "while %s %ss" % (numberofAnimals, Animal, Verb, Celebrity, Gender, celebAction))
