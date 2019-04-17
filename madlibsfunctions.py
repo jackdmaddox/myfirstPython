@@ -1,32 +1,39 @@
-
-"""
-Commenting out because the variables were stored inside of the function instead of being outside and global
-
-def madlibsfunction():
-    celebAction = input('Enter a verb...').lower()
-
-    celebrity = input('Please enter the name of a celebrity...').title()
-
-    gender = input('is that a he, she or they?').lower()
-
-    animal = input('Please enter a type of animal...').lower()
-
-    animalVerb = input('What is the animal doing...').lower()
-
-    numberOfAnimals = int(input('How many of them are there?'))
-
-    print ("%s " "%s " "are" " %s" " %s " "while %s %ss" % (numberOfAnimals, animal, animalVerb, celebrity, gender, celebAction))
-"""
-
-celebAction = input('Enter a verb...').lower()
-celebrity = input('Please enter the name of a celebrity...').title()
-gender = input('is that a he, she or they?').lower()
-animal = input('Please enter a type of animal...').lower()
-animalVerb = input('What is the animal doing...').lower()
+celebAction = input('Enter a verb...')
+celebrity = input('Please enter the name of a celebrity...')
+gender = input('is that a he, she or they?')
+animal = input('Please enter a type of animal...')
+animalVerb = input('What is the animal doing...')
 numberOfAnimals = int(input('How many of them are there?'))
 
+def fixCelebAction(celebAction):
+    celebAction = celebAction.lower()
+    return celebAction
+
+def fixCelebrity(celebrity):
+    celebrity = celebrity.title()
+    return celebrity
+
+def fixGender(gender):
+    gender = gender.lower()
+    return gender
+
+def fixAnimal(animal):
+    animal = animal.lower()
+    return animal
+
+def fixAnimalVerb(animalVerb):
+    animalVerb = animalVerb.lower()
+    return animalVerb
+    
+
 def madlibsfunction(celebAction, celebrity, gender, animal, animalVerb, numberOfAnimals):
-    return print ("%s " "%s " "are" " %s" " %s " "while %s %ss" % (numberOfAnimals, animal, animalVerb, celebrity, gender, celebAction))
+    fixedAnimal = fixAnimal(animal)
+    fixedAnimalVerb = fixAnimalVerb(animalVerb)
+    fixedCelebrity = fixCelebrity(celebrity)
+    fixedGender = fixGender(gender)
+    fixedCelebAction = fixCelebAction(celebAction)
+
+    return print ("%s " "%s " "are" " %s" " %s " "while %s %ss" % (numberOfAnimals, fixedAnimal, fixedAnimalVerb, fixedCelebrity, fixedGender, fixedCelebAction))
 
 
 madlibsfunction(celebAction, celebrity, gender, animal, animalVerb, numberOfAnimals)
