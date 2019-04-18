@@ -18,18 +18,17 @@ service_level = (input("Level of service?"))
 number_people = int(input("Split how many ways?"))
 
 def tipcalc(bill_total, service_level, number_people):
-    tip_amount = bill_total * tip_percent
+    #tip_amount = bill_total * service_level
     final_bill_total = bill_total + tip_amount
     per_person_amount = final_bill_total / number_people
 
     if service_level == "good":
-        #tip_percent = .20
-        #tip_amount = bill_total * tip_percent
+        tip_amount = bill_total * .20
         #final_bill_total = bill_total + tip_amount
         #per_person_amount = final_bill_total / number_people
-        print("Tip amount: $" + (tip_amount(.20))
-        print("Total amount: $" + (final_bill_total)
-        print("Amount per person: $" + (per_person_amount)
+        print("Tip amount: $" + tip_amount)
+        print("Total amount: $" + (final_bill_total))
+        print("Amount per person: $" + (per_person_amount))
     elif service_level == "fair":
         tip_percent = .15
         tip_amount = bill_total * tip_percent
